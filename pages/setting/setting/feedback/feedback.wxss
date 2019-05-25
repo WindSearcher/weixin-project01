@@ -1,0 +1,12 @@
+/* pages/setting/setting/feedback/feedback.wxss */
+.content{
+        position: relative;
+        top:20px;
+        border: 0.1px solid skyblue;
+        width: 100%;
+}
+.btn{
+  background-color: #39b5de;
+  width: 200rpx;
+  margin-top: 100rpx;
+}

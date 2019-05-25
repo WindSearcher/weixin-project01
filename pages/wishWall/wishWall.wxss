@@ -1,0 +1,51 @@
+/* pages/wishWall/wishWall.wxss */
+
+.wish{
+  width:43%;
+  height:200px;
+  float:left;
+  color:black;
+  padding:5px;
+  margin-left:6px;
+  margin-right:6px;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+
+
+.wish .wish-img{
+  width:30px;
+  height:30px;
+  vertical-align:middle;
+  display:inline-block;
+
+}
+
+.wish .wish-txt{
+   font-size:10px;
+   display:inline-block;
+   margin-left:20px;
+}
+
+.wish .wish-content{
+  margin-top:15px;
+  font-size:15px;
+  font-family: STKaiti;
+  word-break:break-all;
+}
+
+.footer .img{
+   width:40px;
+   height:40px;
+   position:fixed;
+   right:20px;
+   bottom:20px;
+}
+
+.switch_next .img{
+  width:40px;
+  height:40px;
+   position:fixed;
+   right:50%;
+   bottom:20px;
+}

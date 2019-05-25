@@ -1,0 +1,80 @@
+/* pages/addArticle/addArticle.wxss */
+
+.body{
+  width:100%;
+  height:100%;
+}
+
+.header{
+  width:100%;  
+}
+
+.header .img{
+   width:40px;
+   height:40px;
+   vertical-align:middle;
+}
+
+.header .txt{
+   font:10px;
+   color:green;
+   display:inlie-block;
+   margin-left:140px;
+}
+
+
+
+.footer .img{
+   width:40px;
+   height:40px;
+   position:absolute;
+   right:30px;
+   bottom:40px;
+}
+
+
+.body .cover{
+   width:100%;
+   height:200px;
+   background-color:antiquewhite;
+   box-sizing:border-box;
+}
+
+.body .cover .addImg{
+  width:40px;
+  height:40px;
+  display:inline-block;
+  margin-left:40%;
+  margin-top:80px;
+}
+
+.body .cover .chooseImgSrc{
+  width:100%;
+  height:100%;
+}
+
+.body .title{
+  margin-top:20px;
+  padding-left:20px;
+  width:100%;
+  height:30px;
+  border-bottom:1px solid yellowgreen;
+  color:black;
+  font:24px;
+  font-weight:bold;
+}
+
+.body .content{
+  margin-top:20px;
+  padding-left:20px;
+  
+}
+
+
+.footer .img{
+   width:40px;
+   height:40px;
+   display:inline-block;
+   margin-left:260px;
+   margin-bottom:20px;
+}

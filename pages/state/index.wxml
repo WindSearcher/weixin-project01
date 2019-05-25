@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" class='picker-pos'>
+    <input value='{{time}}' placeholder='选择时间' />
+  </picker>
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+</view>

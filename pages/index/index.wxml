@@ -1,0 +1,69 @@
+<!-- index.wxml-->  
+<swiper indicator-dots="true"
+  autoplay="true" interval="3000" duration="1000" class = "swiper">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" style = "width:100%" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<view class = "timeShow">
+       <text class = "time">{{time}}</text> 
+</view> 
+
+<text class = "message_title">今日寄语</text>
+<view class = "message">
+         <view class="marquee_box">
+                <view class="marquee_text" style="{{orientation}}:{{marqueeDistance}}px;font-size: {{size}}px;">
+                 <image src="../../images/announce.png" class='marquee-img' />
+                 <text style='color:{{randomcolor}}'>{{message}}</text>
+                </view>
+        </view>
+ </view>
+
+
+<view class = "background">
+        <view class = "plan_item">
+                <view>
+                <image  src = "../../images/plan.png" bindtap='showplan' class = "plan_img"></image>
+                </view>
+                <view>
+                <image  bindtap = 'addPlan' src = "../../images/plan_add.png" class = "plan_img"></image>
+                </view>
+                <view>
+                <image  bindtap='seeProgress' src = "../../images/plan_progress.png" class = "plan_img"></image>
+                </view>  
+                <view>
+                <image   src = "../../images/message.png" class = "plan_img" bindtap='show_words'></image>
+                </view>
+        </view>
+</view>
+
+
+<view class = "progress">
+        <modal hidden="{{pro_hidden}}" title="完成进度" confirm-text="返回" no-cancel="true" bindconfirm="confirm">
+                        <view class='time'>
+                        {{}}
+                        </view>
+                        <view class="wrap"> 
+                                <view class="top"> 
+                                <canvas class="cir" style="width:212px; height:212px;" canvas-id="canvasArc"> 
+                                </canvas> 
+                                <view class = "cc">
+                                <view >{{progress}}</view>
+                                <view>progress</view> 
+                                </view>
+                                </view> 
+                        </view>
+        </modal>
+        <modal hidden="{{nullPlan}}" title="亲！还未添加计划哦！" confirm-text="添加计划" cancel-text = "返回" bindconfirm="add" bindcancel = "cancel">
+        </modal> 
+</view>
+
+<view class = "dis_words">
+        <modal hidden="{{words_hidden}}" title="寄语全浏览" confirm-text="看完了" no-cancel="true" bindconfirm="seeOver">
+                <text class = "daywords">{{message}}</text>
+        </modal>
+</view>

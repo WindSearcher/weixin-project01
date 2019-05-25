@@ -1,0 +1,7 @@
+<!--pages/setting/setting/feedback/feedback.wxml-->
+<view>
+  <textarea class="content" type="text" placeholder='请写下你的反馈' name="feedback" bindinput='getFeedback'></textarea>
+  <button class="btn" bindtap='submit' size="default">
+    提交反馈
+  </button>
+</view>

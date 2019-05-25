@@ -1,0 +1,81 @@
+/* pages/showArticle/showArticle.wxss */
+
+.diary{
+  width:100%;
+  border-bottom:2px solid #ccc;
+  display:flex;
+  position:relative;
+}
+
+
+.diary .left .img{
+  width:80px;
+  height:80px;
+  box-shadow:1px 1px 1px #ccc,1px -1px 1px #ccc,-1px 1px 1px #ccc,-1px -1px 1px #ccc;
+  vertical-align:top;
+  display:inline-block;
+  margin-left:10px;
+}
+
+.diary .left  .position{
+  width:25px;
+  height:25px;
+  vertical-align:bottom;
+  display:inline-block;
+  margin-left:10px;
+  margin-top:20rpx;
+  margin-right:5px;
+}
+
+.diary .left{
+    width:35%;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.diary .right{
+    width:70%;
+    margin-top:20px;
+}
+
+.diary .title{
+   font-family: STXingkai;
+   display:inline-block;
+   margin-left:10px;
+   font-size:17px;
+   color:black;
+}
+
+.diary .content{
+   display:inline-block;
+   margin-left:10px;
+   margin-top:10px;
+   font-size:15px;
+   color:#ccc;
+   word-break:break-all;
+}
+
+
+.diary .time{
+   position: absolute;
+   right:10px;
+   bottom:20px;
+   font-size:15px;
+   color:#ccc;
+}
+
+.footer .img{
+   width:40px;
+   height:40px;
+   position:fixed;
+   right:40px;
+   bottom:40px;
+}
+
+.footer .img{
+   width:40px;
+   height:40px;
+   position:fixed;
+   right:20px;
+   bottom:40px;
+}

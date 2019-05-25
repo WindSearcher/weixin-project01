@@ -1,0 +1,34 @@
+<!--pages/emotion/emotion.wxml-->
+<view class="body">
+  <view class="header">
+ 
+
+    <view class="emotion">
+      <image class="emotion_img" src="../../images/emotion_value.png"> </image>
+      <text class="txt_value">情绪值：  {{emotion_value}}</text>
+    </view>
+
+   
+  </view>
+
+  <view class="container">
+    <view class="dairy">
+      <text class="txt" bindtap="getDairyList">1.心情日记</text>
+
+      <image class="img" src="{{imgUrls1}}" bindtap="getDairyList" />
+    </view>
+
+    <view class="music">
+      <text class="txt" bindtap="getMusicList">2.轻听一刻</text>
+
+      <image class="img" src="{{imgUrls2}}" bindtap="getMusicList" />
+    </view>
+
+    <view class="wish">
+      <text class="txt" bindtap="getWishList">3.许愿墙</text>
+
+      <image class="img" src="{{imgUrls3}}" bindtap="getWishList" />
+
+    </view>
+  </view>
+</view>

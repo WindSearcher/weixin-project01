@@ -1,0 +1,28 @@
+<!--pages/addArticle/addArticle.wxml-->
+<view class="body">
+  <view class="header">
+    <image class="img" src="{{src}}"> </image>
+    <text class="txt">{{diary.time}}</text>
+  </view>
+
+  <view class="cover" bindtap="chooseImg" wx:if="{{first}}">
+    <image class="addImg" src="../../images/addImg.png"></image>
+  </view>
+
+  <view class="cover" wx:if="{{first==false}}" bindtap="chooseImg">
+    <image class="chooseImgSrc" src="{{chooseImgSrc}}"></image>
+  </view>
+  <view class="title">
+    <textarea placeholder="请输入标题" bindinput="getTitle" value="{{diary.title}}" />
+  </view>
+
+  <view class="content">
+
+    <textarea placeholder="请输入正文" bindinput="getContent" auto-focus value="{{diary.content}}" />
+
+  </view>
+
+  <view class="footer">
+    <image class="img" src="../../images/save.png" bindtap="updateDiary"></image>
+  </view>
+</view>

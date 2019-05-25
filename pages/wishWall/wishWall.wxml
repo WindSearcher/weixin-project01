@@ -1,0 +1,18 @@
+<!--pages/wishWall/wishWall.wxml-->
+<block wx:for="{{wishList}}"> 
+    <view class="wish" style="background-color:{{color[index%4]}}">
+        <image class="wish-img" src="{{item.avatarUrl}}" bindtap="getDairyList"/>
+        <view class="wish-txt">{{item.time}}</view>
+        <view class="wish-content">
+             {{item.content}}
+        </view>
+    </view>              
+</block>
+
+<view class="switch_next">
+   <image class="img" src="../../images/switch_next.png" bindtap='switch_next' > </image> 
+</view>
+
+<view class="footer">
+    <image class="img" src="../../images/add.png" bindtap='addWish' > </image>
+</view>

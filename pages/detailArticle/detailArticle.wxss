@@ -1,0 +1,70 @@
+/* pages/detailArticle/detailArticle.wxss */
+.diary .img{
+  width:100%;
+}
+
+.diary .time{
+  margin-left:30rpx;
+  margin-top:30rpx;
+  color:#ccc;
+  font-size:14px;
+}
+
+.diary .title{
+  margin-left:30rpx;
+  margin-top:120rpx;
+  font-size:25px;
+  color:aqua;
+  font-weight:bold;
+}
+
+.diary .content{
+  margin-left:30rpx;
+  margin-top:160rpx;
+  font-size:16px;
+  font-family: STKaiti;
+}
+
+.diary .sentiment{
+  margin-top:120rpx;
+  margin-left:30rpx;
+  font-size:22px;
+}
+
+
+.diary .sentiment image{
+  width:30px;
+  height:30px;
+  vertical-align: middle;
+
+}
+
+
+
+.footer image{
+  width:30px;
+  height:30px;
+  vertical-align: middle;
+}
+
+.footer .left{
+  width:50%;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  text-align: center;
+
+}
+
+.footer .right{
+  width:50%;
+  position:fixed;
+  bottom:0px;
+  right:0px;
+
+}
+
+.footer{
+  color:#ccc;
+}
+

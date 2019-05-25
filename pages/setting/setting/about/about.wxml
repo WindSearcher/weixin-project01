@@ -1,0 +1,6 @@
+<!--pages/setting/setting/about/about.wxml-->
+<van-cell-group>
+  <van-cell title="熊义杰" value="2263509062" />
+  <van-cell title="李强" value="1793521005" />
+  <van-cell title="王浩" value="1742496405" />
+</van-cell-group>

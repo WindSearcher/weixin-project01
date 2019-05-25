@@ -1,0 +1,18 @@
+/* pages/setting/setting/privacy/privacy.wxss */
+.top{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 50rpx;
+}
+.title{
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.line{
+  height: 4rpx;
+  width: 100%;
+  background-color: black;
+}
+.content{
+  font-size: 26rpx;
+}

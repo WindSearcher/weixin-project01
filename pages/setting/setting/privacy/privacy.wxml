@@ -1,0 +1,8 @@
+<!--pages/setting/setting/privacy/privacy.wxml-->
+<view class='top'>
+  <text class='title'>学习状态管理隐私协议</text>
+  <view class='line'></view>
+  <text class='content'>学生状态管理尊重和保护用户的隐私，本隐私政策将告诉您我们如何收集和使用有关您的信息，以及我们如何保护这些信息的安全。您在授权登录之前请务必仔细阅读本隐私条款，如同意，本隐私政策条款在您授权后将立即生效</text>
+</view>
+
+<view></view>

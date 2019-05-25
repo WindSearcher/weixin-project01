@@ -1,0 +1,32 @@
+<!--pages/addArticle/addArticle.wxml-->
+<view class="body">
+    <view class="header"> 
+       <image class="img" src="{{src}}"> </image>
+       <text class="txt">{{time}}</text>
+    </view>
+
+     <view class="cover" bindtap="chooseImg" wx:if="{{first}}">
+         <image class="addImg" src="../../images/addImg.png" ></image>
+    </view>
+
+    <view class="cover" wx:if="{{first==false}}" bindtap="chooseImg">
+          <image class="chooseImgSrc" src="{{chooseImgSrc}}" ></image>
+    </view>
+
+
+
+    <view class="title">
+        <textarea placeholder="请输入标题"  bindblur="getTitle" />
+    </view>
+
+
+    <view class="content">
+
+        <textarea placeholder="请输入正文"  bindblur="getContent" auto-focus/>
+
+    </view>
+
+    <view class="footer">
+       <image class="img" src="../../images/publish.png" bindtap="publish"></image>
+    </view>
+</view>

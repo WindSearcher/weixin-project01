@@ -1,0 +1,161 @@
+
+ /* index.wxss */
+
+.timeShow{
+        position: absolute;
+        top:150px;
+        right: 0px
+}
+.time{
+        font-size: 14px;
+        color: darkblue;
+        height: 20px;
+}
+
+.marquee_box {
+        width: 100%;
+        height: 25px;
+        position: relative;
+        top:2px;
+        background: repeating-linear-gradient(white,rgb(236, 179, 131) 30%);
+}
+ .message_title{
+        font-family: "桃心心形字体";
+        color: rgb(41, 135, 243);
+}
+.marquee_text {   
+        white-space: nowrap;
+        position: absolute;
+        top: 0px;
+        display: flex;
+        flex-direction: row;
+}
+.marquee-img{
+        width: 25px;
+        height: 25px;
+        margin-right: 5rpx;
+        margin-top: -1px;
+}
+.plan_section{
+        margin-left: 10%;
+        width:80%;
+        display:flex;
+         justify-content:center; 
+        background-color: rgba(212, 212, 212, 0.329)
+}
+
+.uplan_area{
+        position: relative;
+        width: 150px;
+        font-size: 12px;
+        border-bottom: 1px chartreuse solid;
+}
+
+ .plan_menu{
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+}
+.image_menu{
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        z-index: 1;
+}
+.image_pro{
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+        opacity: 0;
+}
+.cir{ 
+        display: inline-block; 
+        margin-top: 20rpx; 
+} 
+  
+.top{ 
+        text-align: center
+} 
+  
+.cc{ 
+        color: gold;
+        position: relative;
+        top:-50px;
+        margin-top: -120px; 
+} 
+.background{
+         width: 80%;
+        margin-left: 10%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top:43%;
+        background-color: beige;
+}
+.plan_item{
+        width:250px;
+        height: 250px;
+        position: relative;
+        top:20px;
+        background-color: rgba(212, 212, 212, 0.329);
+}
+.plan_item view{
+        background-color: #39b5de;
+        border: 1px solid rgba(255, 166, 0, 0.301);
+        height: 80px;
+        width:80px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+}
+.plan_img{
+       height: 50px;
+        width:50px;
+}
+
+.plan_item view:first-of-type{
+        position: relative;
+        top:30px;
+        left:35px;
+}
+.plan_item view:nth-of-type(2){
+        position: relative;
+        top:-52px;
+        left:135px;
+}
+
+.plan_item view:nth-of-type(3){
+        position: relative;
+        top:-30px;
+        left:35px;
+}
+.plan_item view:nth-of-type(4){
+        position: relative;
+        top:-112px;
+        left:135px;
+}
+.cir{ 
+        display: inline-block; 
+        margin-top: 20rpx; 
+} 
+  
+.top{ 
+        text-align: center
+} 
+  
+.cc{ 
+        color: gold;
+        position: relative;
+        top:-50px;
+        margin-top: -120px; 
+} 
+.daywords{
+        color: hotpink;
+        font-size: 18px;
+}

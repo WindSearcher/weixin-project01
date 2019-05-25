@@ -1,0 +1,76 @@
+
+
+.body {
+  width:100%;
+	color: #7c7873;
+	font-family: 'YanoneKaffeesatzRegular';
+}
+
+p {
+	text-shadow:0 1px 0 #fff;
+	font-size:24px;
+  margin-left:11px;
+}
+
+#wrap #title{
+  margin-bottom:20px;
+  margin-top:20px;
+}
+
+#wrap {
+	width:100%;
+}
+
+#form_wrap {
+	position:relative;
+	width:90%;
+  box-sizing:border-box;
+  margin-left:5%;
+  margin-right:5%;
+  padding-left:10px;
+
+	border: 3px solid transparent;
+	border-radius: 3px;	
+	top:20px;  
+  background: linear-gradient(#fff,#fff) padding-box,
+            repeating-linear-gradient(-45deg,red 0,red 12.5%,transparent 0,transparent 25%,blue 0, blue 37.5%,transparent 0,transparent 50%) 0/30px 30px;
+
+  animation: ants 12s linear infinite;
+}
+
+
+@keyframes ants{
+    to{background-position: 100%;}
+}
+
+
+
+textarea {
+	font: 14px normal normal uppercase helvetica, arial, serif;
+	color: #7c7873;
+	width: 90%;
+	height: 250px;
+	padding-top:14px;
+  padding-left:14px;
+	border:1px solid #f8f5f1;
+	border-radius: 5px;
+  box-sizing: border-box;
+	box-shadow: inset 0px 0px 1px #b3a895;
+  margin-left:11px;
+  
+}
+
+#wrap #submit{
+  margin-top:20px;
+  margin-left:80%;
+  margin-bottom:20px;
+}
+
+#wrap #submit .img{
+  width:40px;
+  height:40px;
+}
+
+
+
+

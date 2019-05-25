@@ -1,0 +1,25 @@
+
+<view class='page'>
+<view class = "title">
+        <image class = "image" src = "../../images/add_title.gif"></image>
+</view>
+<view class = "section"> 
+<view class = "add_plan">
+                <image src = "../../images/plan_img.png" class = "plan_image"></image>
+                <text class = "plan_title">Your Plan</text>
+        <view class = "line">
+                <view class = "line_one"></view>
+                <view class = "line_two"></view>
+                <view class = "line_three"></view>
+                <view class = "line_four"></view>
+                <view class = "line_five"></view>
+        </view>
+                <textarea class = "plan_content" type = "text" placeholder='为属于你的一天做个计划吧' name = "plan" value = "{{plan}}"  bindinput='getPlan' ></textarea>
+        </view>
+        <view class = "btn-area">
+                <button  class = "btn" bindtap='planSubmit' size = "default">
+                        添加
+                </button>
+        </view>
+</view> 
+</view>

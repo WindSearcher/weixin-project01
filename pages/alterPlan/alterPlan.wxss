@@ -1,0 +1,34 @@
+/* pages/alterPlan/alterPlan.wxss */
+
+.section{
+        width: 90%;
+        margin-left: 5%;
+        background-color: rgba(139, 139, 139, 0.);
+        border: 1px dotted gray;
+}
+.btn_upd{
+        color: white;
+        position: absolute;
+        font-size: 14px;
+        background-color: gray;
+        top:10px;
+        right: 0px;
+        justify-content: center;
+        vertical-align: middle
+}
+.plan_index{
+        color: black;
+        font-size: 15px;
+}
+.plan_content{
+        color: rgb(23, 23, 241)
+}
+.plan_time{
+        position: relative;
+        left: 80%;
+        top:10px;
+}
+.title{
+        justify-content: center;
+        display: flex
+}

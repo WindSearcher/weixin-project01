@@ -1,0 +1,64 @@
+
+.image{
+        border: 1px solid yellowgreen;
+        width: 100%;
+        height:80px;
+}
+.plan_image{
+        width:20px;
+        height: 20px;
+        position: relative;
+        top:2px;
+}
+.plan_title{
+        font-family: '微软雅黑';
+        color: rgb(18, 209, 212);
+        font-size: 20px;     
+}
+.line{
+        position: relative;
+        top:10px
+}
+.line_one{
+        width:100%;
+        height: 5px;
+        background-color: rgb(83, 28, 28);
+}
+.line_two{
+        width:100%;
+        height: 5px;
+        background-color: lightskyblue;
+
+}
+.line_three{
+        width:100%;
+        height: 5px;
+     background-color: mediumvioletred;
+
+}
+.line_four{
+        width:100%;
+        height: 5px;
+        background-color: yellow;
+
+}
+.line_five{
+        width:100%;
+        height: 5px;
+        background-color: deepskyblue;
+
+}
+.plan_content{
+        position: relative;
+        top:20px;
+        border: 0.1px solid skyblue;
+        width: 100%;
+        background-color: rgba(240, 230, 140, 0.568)
+}
+.btn-area{
+        position: relative;
+        top: 50px;
+}
+.btn{
+        background-color: skyblue
+}

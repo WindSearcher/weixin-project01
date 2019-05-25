@@ -1,0 +1,20 @@
+<!--pages/addWish/addWish.wxml-->
+<view class="body">
+    <view id="wrap">
+        <view id='form_wrap'>
+           <view id="title">
+               <p>Hello 未来的自己</p>
+           </view>
+          
+           <view id="message">
+              <textarea  placeholder="许一个心愿给未来的自己" bindinput='getContent'></textarea>
+           </view>
+            
+            <view id="submit" bindtap="submit">
+                <image class="img" src="../../images/mailbox.png"></image>
+            </view>
+        </view>
+    </view>
+</view>
+
+

@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="container">
+  <!--第一层层：背景图背景图，高斯模糊-->
+  <view class="bg">
+    <image class="poster" mode="scaleToFill" src="{{imgUrl}}"></image>
+  </view>
+  
+  <!--第二层层：灰色蒙层-->
+  <view class="bg-gray">
+  </view>
+  
+  <!--第三层：player层-->
+  <view style="display: {{listShow === true ? 'none' : ''}}">
+    
+    <!--操作-->
+    <view class="title-container">
+      <!-- <view class="title-left"></view> -->
+      <view class="text">
+        <view><text class="name">{{name}}</text></view>
+      </view>
+      
+    </view>
+
+    <!--旋转图-->
+    <view class="rotate-disk-container">
+      <view class="rotate-disk {{pauseStatus === false ? 'rotate-360' : 'rotate-360-paused'}}">
+        <image class="poster" src="{{imgUrl}}"></image>
+      </view>
+    </view>
+
+    <view class="slider-container">
+      <text class="slider-time1">{{currentPosition === 0 ? '' : currentPosition}}</text>
+      <slider
+          value="{{sliderValue}}"
+          bindchange="bindSliderchange"
+          activeColor="#13beec"
+          block-size="12"
+          block-color="#13beec"
+          color='slategray'
+        />
+      <text class="slider-time2">{{duration === 0 ? '' : duration}}</text>
+    </view>
+
+    
+   <view class="operation-container">
+
+      <image src="../../images/prev.png" class="icon-prev" bindtap="bindTapPrev"></image>
+      <image
+        src="{{pauseStatus === false ? '../../images/pause.png' : '../../images/play.png'}}"
+        class="icon-play" bindtap="bindTapPlay"
+        >
+        </image>
+      <image src="../../images/next.png" class="icon-next" bindtap="bindTapNext"></image>
+
+    </view>
+  </view>
+  
+</view>
