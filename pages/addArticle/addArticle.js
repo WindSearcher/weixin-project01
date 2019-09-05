@@ -54,10 +54,20 @@ Page({
       })
     }
 
+    if (title == "") {
+      wx.showToast({
+        title: '标题不能为空',
+        icon: 'none',
+        duration: 2000,
+      })
+    }
+    
     if (content != "") {
       let title = this.data.title;
       let content = this.data.content;
-
+      wx.showLoading({
+        title: '发布中',
+      })
       /*请求request,*/
       wx.uploadFile({
         url: 'https://www.jie12366.xyz:88/diary/save',
@@ -74,6 +84,7 @@ Page({
           wx.showToast({
             title: '发布成功',
           })
+          wx.hideLoading()
           wx.navigateBack({
 
           })

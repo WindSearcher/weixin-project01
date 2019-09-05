@@ -19,6 +19,10 @@
     <image class="item-image" src="/images/article.png"></image>
     <text class="item-text">我的日记</text>
   </view>
+  <view class="list-item"  bindtap='toWishs'>
+    <image class="item-image" src="/images/wish.png"></image>
+    <text class="item-text">我的愿望</text>
+  </view>
   <view class="list-item" bindtap='toSetting'>
     <image class="item-image" src="/images/setting.png"></image>
     <text class="item-text">设置</text>

@@ -73,6 +73,7 @@ Page({
           nickName: res.userInfo.nickName,
           time: app.globalData.time
         }, function(result) {
+
           that.setData({
             date: result.data.date,
             sentiment: result.data.sentiment

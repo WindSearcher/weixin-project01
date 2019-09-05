@@ -1,0 +1,26 @@
+
+
+.joke{
+   width:700rpx;
+   margin-left:25rpx;
+   padding-top:20rpx;
+   border-bottom:1px solid #999;
+   box-sizing:border-box;
+   padding-bottom:15rpx;
+}
+
+.joke .content text{
+   font-size:39rpx;
+   font-weight:200;
+}
+.joke .content{
+   overflow:hidden;
+   word-break:break-all;
+  
+   margin-bottom:15rpx;
+}
+
+.joke .updatetime{
+   color:#ccc;
+   font-size:35rpx;
+}

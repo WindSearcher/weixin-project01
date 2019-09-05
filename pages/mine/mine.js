@@ -72,7 +72,7 @@ Page({
   //我的愿望
   toWishs() {
     wx.navigateTo({
-      url: '/pages/plans/plans',
+      url: '/pages/myWish/myWish',
     })
   },
 

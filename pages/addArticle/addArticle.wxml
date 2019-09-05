@@ -16,13 +16,13 @@
 
 
     <view class="title">
-        <textarea placeholder="请输入标题"  bindblur="getTitle" />
+        <textarea placeholder="请输入少于15字标题"  bindblur="getTitle" maxlength="15"/>
     </view>
 
 
     <view class="content">
 
-        <textarea placeholder="请输入正文"  bindblur="getContent" auto-focus/>
+        <textarea placeholder="请输入正文"  bindblur="getContent" maxlength="-1" auto-focus/>
 
     </view>
 

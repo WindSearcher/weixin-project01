@@ -1,0 +1,38 @@
+<!--pages/wishDetail/wishDetail.wxml-->
+<view class="wish">
+  <image class="wish-img" src="{{wish.avatarUrl}}" bindtap="getDairyList" />
+  <view class="wish-txt">{{wish.time}}</view>
+  <view class="wish-content">
+    {{wish.content}}
+  </view>
+</view>
+
+<!--留言-->
+<view class='liuyan'>
+  <form bindsubmit="formSubmit">
+    <textarea class="liuyantext" type="text" placeholder='请输入留言内容' name="liuyantext" bindinput='getLiuyan'></textarea>
+    <button formType="submit" class="btn">留言</button>
+  </form>
+</view>
+
+<view wx:for="{{re}}" wx:key="re">
+  <view class="result">{{item.result}}</view>
+</view>
+<view style="text-align:center;font-size:14px;color:#ccc;margin-top:20px;">以下是留言内容</view>
+<view wx:for="{{liuyanlist}}" wx:key="liuyanlist" class="liuyanview">
+  <view class="headimg">
+    <image src="{{item.avatarUrl}}"></image>
+  </view>
+  <view class="nickname_liuyantext">
+    <view class="nickname">{{item.nickname}}
+      <view class="time">{{item.date}}</view>
+    </view>
+    <view class="text">{{item.mess}}</view>
+  </view>
+  <!-- 占位符 -->
+  <view style="width:100%;height:10px;"></view>
+</view>
+
+<view wx:if="{{hasData}}">
+  <text class='bottom-content'>已经到底啦</text>
+</view>

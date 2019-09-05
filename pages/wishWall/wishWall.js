@@ -31,7 +31,6 @@ Page({
           that.setData({
             wishList: res.data
           })
-          console.log(res.data)
         })
       }
     })
@@ -81,10 +80,11 @@ Page({
     this.getWish();
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
+  toDetail:function(e){
+    var id = e.currentTarget.dataset.id
+    console.log(id)
+    wx.navigateTo({
+      url: '/pages/wishDetail/wishDetail?id=' + id,
+    })
   }
 })

@@ -1,62 +1,62 @@
 <!--pages/plans/plans.wxml-->
 <view class="page">
 
-        <view class="displan">
-                <text class="plan_title">ALLPLANS</text>
-        </view>
-        <view class='plan_manage' >
-                <view class='alter' bindtap='toAlterPage'>
-                        <image src='../../images/alterPlan.png' class="plan_alt"></image>修改计划
-                </view>
-                <view class="delete" bindtap='toDeletePage'>
-                        <image src='../../images/delete.png' class="plan_del"></image>
-                        删除计划</view>
-        </view>
+  <view class="displan">
+    <text class="plan_title">ALL PLANS</text>
+  </view>
+  <view class='plan_manage'>
+    <view class='alter' bindtap='toAlterPage'>
+      <image src='../../images/update.png' class="plan_alt"></image>修改
+    </view>
+    <view class="delete" bindtap='toDeletePage'>
+      <image src='../../images/delete.png' class="plan_del"></image>
+      删除
+    </view>
+  </view>
 
 
 
-        <view class="date_section">
+ <view class="date_section">
                 <view class="start" bind></view>
                 <view class="plan_section">
 
-                        <block wx:for="{{plan_item}}" class="plan_list">
+                        <view wx:for="{{plan_item}}" class="plan_list">
 
                                 <view class="weui-panel__hd">
                                         <text class="plan_index">计划{{index + 1}}</text>
-                                </view>
-                                <view class="weui-media-box weui-media-box_text">
-                                        <view class="weui-media-box__desc">
-                                                <text class="plan_content">{{item.content}}</text>
-                                                <switch checked='{{item.status}}' class="plan_status" bindchange="changeStatus" type='checkbox' data-id="{{item.id}}"></switch>
-                                        </view>
-                                </view>
+                                <switch checked='{{item.status}}'  bindchange="changeStatus" class='plan_status' type='checkbox' data-id="{{item.id}}">
+                                </switch>  
+                                </view>     
+                                <view class='plan_content'>                
+                                        <text >{{item.content}}</text></view>
+                                
                                 <view class="weui-panel__hd">
                                         <view class="plan_time">{{item.time}}</view>
                                 </view>
 
-                        </block>
+                        </view>
                 </view>
         </view>
 
 
-        <view class="selectDate">
-                <picker mode="date" value="{{date}}" start="2010-01-01" end="{{endDate}}" bindchange="bindDateChange">
-                        <view class="picker">
-                                <text>日期选择: {{selectedDate}}</text>
-                        </view>
-                </picker>
-                <view class="btn_pro">
-                        <button bindtap='seeProgress'>查看所选日期的进度</button>
-                </view>
-        </view>
+  <view class="selectDate">
+    <picker mode="date" value="{{date}}" start="2010-01-01" end="{{endDate}}" bindchange="bindDateChange">
+      <view class="picker">
+        <text>日期选择: {{selectedDate}}</text>
+      </view>
+    </picker>
+    <view class="btn_pro">
+      <button bindtap='seeProgress'>查看所选日期的进度</button>
+    </view>
+  </view>
 
-        <view class="modal_pro">
-                <modal hidden="{{dateprogress_hidden}}" title="完成进度" confirm-text="返回" no-cancel="true" bindconfirm="confirm" class="p_modal">
-                        <view class="progress">
-                                <view class="porgress_title">{{selectedDate}}该天进度</view>
-                                <view class="progress_value">{{date_progress}}</view>
-                        </view>
-                </modal>
-        </view>
+  <view class="modal_pro">
+    <modal hidden="{{dateprogress_hidden}}" title="完成进度" confirm-text="返回" no-cancel="true" bindconfirm="confirm" class="p_modal">
+      <view class="progress">
+        <view class="porgress_title">{{selectedDate}}该天进度</view>
+        <view class="progress_value">{{date_progress}}</view>
+      </view>
+    </modal>
+  </view>
 
 </view>

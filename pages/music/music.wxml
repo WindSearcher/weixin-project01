@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view class="music">
   <!--第一层层：背景图背景图，高斯模糊-->
   <view class="bg">
     <image class="poster" mode="scaleToFill" src="{{imgUrl}}"></image>
@@ -10,7 +10,7 @@
   </view>
   
   <!--第三层：player层-->
-  <view style="display: {{listShow === true ? 'none' : ''}}">
+  <view style="display: {{listShow === true ? 'none' : ''}}" class="player">
     
     <!--操作-->
     <view class="title-container">
@@ -41,18 +41,15 @@
       <text class="slider-time2">{{duration === 0 ? '' : duration}}</text>
     </view>
 
-    
-   <view class="operation-container">
-
-      <image src="../../images/prev.png" class="icon-prev" bindtap="bindTapPrev"></image>
-      <image
-        src="{{pauseStatus === false ? '../../images/pause.png' : '../../images/play.png'}}"
-        class="icon-play" bindtap="bindTapPlay"
-        >
-        </image>
-      <image src="../../images/next.png" class="icon-next" bindtap="bindTapNext"></image>
+    <view class="operation-container">
+        <image src="../../images/prev.png" class="icon-prev" bindtap="bindTapPrev"></image>
+        <image
+          src="{{pauseStatus === false ? '../../images/pause.png' : '../../images/play.png'}}"
+          class="icon-play" bindtap="bindTapPlay"
+          >
+          </image>
+        <image src="../../images/next.png" class="icon-next" bindtap="bindTapNext"></image>
 
     </view>
   </view>
-  
 </view>

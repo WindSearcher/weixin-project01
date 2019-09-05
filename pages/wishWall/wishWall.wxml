@@ -1,6 +1,6 @@
 <!--pages/wishWall/wishWall.wxml-->
 <block wx:for="{{wishList}}"> 
-    <view class="wish" style="background-color:{{color[index%4]}}">
+    <view class="wish" style="background-color:{{color[index%4]}}" bindtap='toDetail' data-id='{{item.id}}'>
         <image class="wish-img" src="{{item.avatarUrl}}" bindtap="getDairyList"/>
         <view class="wish-txt">{{item.time}}</view>
         <view class="wish-content">

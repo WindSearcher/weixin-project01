@@ -13,6 +13,7 @@ Page({
     content: '0',
     sentiment: '',
     photo: '',
+    isPreview:false
   },
 
   /**
@@ -21,14 +22,14 @@ Page({
   onLoad: function(options) {
     var that = this;
     let id = options.id;
-    console.log("id:"+id);
+    console.log("id:" + id);
 
     app.ajax.post('/diary/getOne', {
       id: id,
-    }, function (res) {
+    }, function(res) {
       console.log(res.data);
       that.setData({
-        id:id,
+        id: id,
         time: res.data.time,
         title: res.data.title,
         content: res.data.content,
@@ -39,6 +40,19 @@ Page({
 
   },
 
+  previewPhoto() {
+    var that = this
+    that.setData({
+      isPreview:true
+    })
+  },
+
+  backDetail(){
+    var that = this
+    that.setData({
+      isPreview: false
+    })
+  },
 
   updateDiary: function() {
     let id = this.data.id;

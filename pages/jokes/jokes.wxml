@@ -1,0 +1,17 @@
+<block wx:for="{{jokeList}}">
+   <view class="joke">
+      <!-- text会把html中的空格和换行也解析 -->
+      <view class="content">
+         <text>  {{item.content}}</text>
+      </view>
+      <view  class="updatetime">
+         <text>{{item.updatetime}}</text>
+      </view>
+      
+   </view>
+</block>
+
+
+<view wx:if = "{{hasData}}">
+  <text class='bottom-content'>已经到底啦</text> 
+</view>

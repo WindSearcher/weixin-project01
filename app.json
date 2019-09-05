@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/emotion/emotion",
+    "pages/index/index",
     "pages/showArticle/showArticle",
     "pages/wishWall/wishWall",
     "pages/addArticle/addArticle",
@@ -18,7 +18,10 @@
     "pages/detailArticle/detailArticle",
     "pages/updateArticle/updateArticle",
     "pages/deletePlan/deletePlan",
-    "pages/alterPlan/alterPlan"
+    "pages/alterPlan/alterPlan",
+    "pages/myWish/myWish",
+    "pages/wishDetail/wishDetail",
+    "pages/jokes/jokes"
   ],
   "requiredBackgroundModes": [
     "audio"
@@ -27,7 +30,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#39b5de",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#000",

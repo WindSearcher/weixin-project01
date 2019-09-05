@@ -1,94 +1,140 @@
-// pages/emotion/emotion.js
-const API_URL = 'https://c.y.qq.com'
-var common = require("../../utils/common.js");
-const app = getApp();
+const app = getApp()
 
 Page({
   data: {
-    src: "../../images/sun.png",
-    msg: "你在的地方一定是晴天吧",
-    music: {},
-    emotion_value: 100,
-    imgUrls1: 'http://img1.imgtn.bdimg.com/it/u=77561103,2816134510&fm=26&gp=0.jpg',
-
-    imgUrls2: 'http://img3.imgtn.bdimg.com/it/u=3449317484,1628858579&fm=15&gp=0.jpg',
-
-    imgUrls3: 'http://img0.imgtn.bdimg.com/it/u=3691619425,2165126769&fm=200&gp=0.jpg',
-
-    indicatorDots: false,
-    autoplay: true,
-    interval: 3000,
-    duration: 1000,
-    time:'',
+    motto: 'Hello World',
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    navData: [
+      {
+        text: '心情日记'
+      },
+      {
+        text: '倾听一刻'
+      },
+      {
+        text: '幽默段子'
+      },
+      {
+        text: '星语心愿'
+      },
+    ],
+    currentTab: 0,
+    pageSize:5
   },
-
-  onLoad:function(){
-    this.setData({
-      time: common.getDate()
-    })
-    app.globalData.time = this.data.time;
-    this.getData();
-  },
-
-  getDairyList: function () {
-    wx.navigateTo({
-      url: '/pages/showArticle/showArticle',
-    })
-  },
-
-  getMusicList: function() {
-    wx.navigateTo({
-      url: '/pages/music/music',
-    })
-  },
-
-  getWishList: function() {
-    wx.navigateTo({
-      url: '/pages/wishWall/wishWall',
-    })
-  },
-
-  //获取数据
-  getData: function () {
-    var that = this
-    wx.getUserInfo({
-      success: res => {
-        app.ajax.post('/sentiment/get', {
-          nickName: res.userInfo.nickName,
-          time: app.globalData.time
-        }, function (result) {
-          that.setData({
-            sentiment: result.data.sentiment
-          })
-          console.log(result);
-          let emotion_value = 0;
-          let sentiment = that.data.sentiment;
-          let emotion_number = 0;
-          console.log("sentiment:" + sentiment.length);
-
-          for(let i = 0;i < sentiment.length;++i){
-            if (sentiment[i] != 0){
-              emotion_value += sentiment[i];
-              emotion_number++;
-            }
-            console.log("sentiment[]:" + sentiment[i]);
-          }
-
-          if (emotion_number != 0)
-              emotion_value /= emotion_number;
-          //将其转化为整型 
-          emotion_value = parseInt(emotion_value);
-
-          if(emotion_value == 0){
-            //表明七天之内并没有发表日记，所以情绪值获取均为0
-             emotion_value = 100;
-          }
-          
-          that.setData({
-            emotion_value: emotion_value,
-          })
+  //事件处理函数
+  onLoad: function () {
+    this.showArticle = this.selectComponent("#showArticle");
+    console.log("showArticle:"+this.showArticle.data);
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true
+      })
+    } else if (this.data.canIUse) {
+      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.userInfoReadyCallback = res => {
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
         })
       }
+    } else {
+      // 在没有 open-type=getUserInfo 版本的兼容处理
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+        }
+      })
+    }
+
+
+    wx.getSystemInfo({
+      success: (res) => {
+        this.setData({
+          pixelRatio: res.pixelRatio,
+          windowHeight: res.windowHeight,
+          windowWidth: res.windowWidth
+        })
+      },
     })
+
+    console.log("height:"+that.data.windowHeight);
   },
+
+  switchNav(event) {
+    var cur = event.currentTarget.dataset.current;
+    //每个tab选项宽度占1/5
+    if (this.data.currentTab == cur) {
+      return false;
+    } else {
+      this.setData({
+        currentTab: cur
+      })
+    }
+  },
+
+  // 触摸开始事件
+  touchStart: function (e) {
+
+    // console.log(e)
+    this.setData({
+      fx: e.changedTouches[0].clientX,
+      fy: e.changedTouches[0].clientY
+    });
+  },
+  // 触摸结束事件
+  touchEnd: function (e) {
+
+    let x = e.changedTouches[0].clientX;
+    let y = e.changedTouches[0].clientY;
+    this.getTouchData(this.data.fx, this.data.fy, x, y);
+  },
+
+  getTouchData: function (endX, endY, startX, startY) {
+    let turn = "";
+    if (endX - startX > 80 && Math.abs(endY - startY) < 50) {      //右滑
+      turn = "right";
+      let currentTab = this.data.currentTab;
+      currentTab += 1;
+      if(currentTab > 3)
+         currentTab = 3;
+      this.setData({
+        currentTab: currentTab
+      })
+      console.log("right:" + currentTab);
+    } else if (endX - startX < -80 && Math.abs(endY - startY) < 50) {   //左滑
+      turn = "left";
+      let currentTab = this.data.currentTab;
+      currentTab -= 1;
+
+      if (currentTab < 0)
+        currentTab = 0;
+      this.setData({
+        currentTab: currentTab
+      })
+      console.log("right:" + currentTab);
+    }
+  },
+   
+  //上拉加载
+  onReachBottom() {
+    var that = this
+    let currentTab = this.data.currentTab;
+    //这里可以判断是否进行上拉加载，禁止某个子组件上拉刷新
+    if (currentTab != 1 || currentTab != 3){
+      wx.showLoading({
+        title: '正在加载',
+      })
+
+      this.showArticle.getArticle01()
+      wx.hideLoading()
+    }
+  }
 })

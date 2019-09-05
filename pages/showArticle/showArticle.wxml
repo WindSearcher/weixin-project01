@@ -1,36 +1,37 @@
-<block wx:for="{{diaryList}}"> 
-    <navigator url="../detailArticle/detailArticle?id={{item.id}}">
-      <view class="diary">
-          <view class="left">
-              <view>
-                  <image class="img" src="{{item.photo}}"></image>
-              </view>
+<block wx:for="{{diaryList}}">
+  <navigator url="../detailArticle/detailArticle?id={{item.id}}">
+    <view class="diary">
+      <view class="left">
+        <view>
+          <image class="img" src="{{item.photo}}"></image>
+        </view>
 
-              <view>
-                  <image class="position" src="../../images/emotion_value.png"></image>
-                  <text style="color:#ccc;font-size:10px;">情绪值  {{item.sentiment}}</text>
-              </view>
-          </view>
+        <view>
+          <image class="position" src="../../images/emotion_value.png"></image>
+          <text style="color:#ccc;font-size:10px;">情绪值  {{item.sentiment}}</text>
+        </view>
+      </view>
 
-          <view class="right">
-              <view>
-                  <text class="title">{{item.title}}</text>
-              </view>
-                  <text class="content">{{item.content}}</text> 
-              <view>
-              
-              </view>
+      <view class="right">
+        <view>
+          <text class="title">{{item.title}}</text>
+        </view>
+        <text class="content">{{item.content}}</text>
+        <view>
 
-              <view>
-                  <text class="time">{{item.time}}</text> 
-              </view>       
-          </view>
-      </view> 
-      </navigator>
+        </view>
+
+        <view>
+          <text class="time">{{item.time}}</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
 </block>
 
-  <view class="footer">
-    <image class="img" src="../../images/add.png" bindtap='addArticle' > </image> 
-  </view>
-
-
+<view class="footer">
+  <image class="img" src="../../images/add.png" bindtap='addArticle'> </image>
+</view>
+<view wx:if = "{{hasData}}">
+  <text class='bottom-content'>已经到底啦</text> 
+</view>

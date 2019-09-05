@@ -24,7 +24,10 @@ image{
         font-size: 25px;
         color: darkorchid;
 }
-
+.plan_status {
+        position: absolute;
+        right: 5px;
+}
 .plan_section {
         width: 90%;
         height: 100%;
@@ -40,13 +43,10 @@ image{
 }
 
 .plan_content {
-        color: cornflowerblue;
-}
-
-.plan_status {
-        position: absolute;
-        zoom: 1;
-        right: 0px;
+        padding-left: 15px;
+        margin-top: 5px;
+        color: rgb(0, 89, 255);
+        font-size: 13px;
 }
 
 .plan_time {

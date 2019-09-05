@@ -38,12 +38,14 @@
     margin-top:20px;
 }
 
+/*保证标题只在一行*/
 .diary .title{
    font-family: STXingkai;
    display:inline-block;
    margin-left:10px;
    font-size:17px;
    color:black;
+   overflow:hidden;
 }
 
 .diary .content{
@@ -78,4 +80,9 @@
    position:fixed;
    right:20px;
    bottom:40px;
+}
+
+.bottom-content{
+  font-size: 18px;
+  margin-left: 250rpx;
 }

@@ -1,3 +1,8 @@
 {
-    "navigationBarTitleText": "情绪宣泄池"
+    "navigationBarTitleText": "情绪宣泄池",
+    "usingComponents": {
+      "component-showArticle": "../showArticle/showArticle",
+      "component-music":"../music/music",
+      "component-wishWall":"../myWish/myWish"
+    }
 }
