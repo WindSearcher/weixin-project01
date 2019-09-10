@@ -20,14 +20,14 @@
                                         </button>
                                 </view>
                                 <view class="weui-panel__hd">
-                                        <text class="plan_content" >{{item.content}}</text>
+                                        <text class="plan_content hidden_text" >{{item.content}}</text>
                                         <view class="plan_time">{{item.time}}</view>
                                 </view>
 
                         </block>
                 </view>
                 <view>
-                        <button>已经到底了</button>
+                        <button class="btn_last">已经到底了</button>
                 </view>
         </view>
         

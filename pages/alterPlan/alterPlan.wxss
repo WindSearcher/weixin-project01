@@ -1,34 +1,51 @@
 /* pages/alterPlan/alterPlan.wxss */
 
-.section{
-        width: 90%;
-        margin-left: 5%;
-        background-color: rgba(139, 139, 139, 0.);
-        border: 1px dotted gray;
+.section {
+  width: 90%;
+  margin-left: 5%;
+  background-color: rgba(139, 139, 139, 0);
+  border: 1rpx solid #e0e0e0;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx #e0e0e0;
 }
-.btn_upd{
-        color: white;
-        position: absolute;
-        font-size: 14px;
-        background-color: gray;
-        top:10px;
-        right: 0px;
-        justify-content: center;
-        vertical-align: middle
+
+.btn_upd {
+  color: white;
+  position: absolute;
+  font-size: 14px;
+  background-color: gray;
+  top: 10px;
+  right: 0px;
+  justify-content: center;
+  vertical-align: middle;
+  margin-right: 16rpx;
 }
-.plan_index{
-        color: black;
-        font-size: 15px;
+
+.plan_index {
+  color: black;
+  font-size: 15px;
 }
-.plan_content{
-        color: rgb(23, 23, 241)
+
+.plan_content {
+  font-size: 26rpx;
+  color: rgb(179, 172, 172);
 }
-.plan_time{
-        position: relative;
-        left: 80%;
-        top:10px;
+
+.plan_time {
+  position: relative;
+  left: 80%;
+  top: 10px;
 }
-.title{
-        justify-content: center;
-        display: flex
+
+.title {
+  justify-content: center;
+  display: flex;
+  margin: 10rpx 40rpx;
+  font-size: 25px;
+  color: #777;
+}
+
+.btn_last {
+  color: white;
+  background-color: skyblue;
 }
