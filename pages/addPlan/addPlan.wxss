@@ -1,64 +1,87 @@
-
-.image{
-        border: 1px solid yellowgreen;
-        width: 100%;
-        height:80px;
+.container {
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+padding: 80rpx 0;
+box-sizing: border-box;
 }
-.plan_image{
-        width:20px;
-        height: 20px;
-        position: relative;
-        top:2px;
-}
-.plan_title{
-        font-family: '微软雅黑';
-        color: rgb(18, 209, 212);
-        font-size: 20px;     
-}
-.line{
-        position: relative;
-        top:10px
-}
-.line_one{
-        width:100%;
-        height: 5px;
-        background-color: rgb(83, 28, 28);
-}
-.line_two{
-        width:100%;
-        height: 5px;
-        background-color: lightskyblue;
+.plan_content {
+margin: 20rpx 40rpx;
+border: 1rpx solid #e0e0e0;
+border-radius: 10rpx;
+box-shadow: 0 0 5rpx #e0e0e0;
+font-size: 14px;
 
 }
-.line_three{
-        width:100%;
-        height: 5px;
-     background-color: mediumvioletred;
+.button-hover {
+color: rgba(255, 255, 255, 0.6);
+background-color: rgb(22, 146, 155);
+}
+
+.userinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.userinfo-avatar {
+  width: 72rpx;
+  height: 72rpx;
+  margin-left: 40rpx;
+  border-radius: 50%;
+}
+
+.section {
+  font-size: 30rpx;
+}
+
+.btn {
+  margin-top: 20rpx;
+  margin-right: 40rpx;
+}
+
+.todos {
+  margin: 20rpx 40rpx;
+  border: 1rpx solid #e0e0e0;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx #e0e0e0;
+}
+
+.text {
+margin: 20rpx 40rpx;
+border: 1rpx solid #e0e0e0;
+border-radius: 10rpx;
+box-shadow: 0 0 5rpx #e0e0e0;
 
 }
-.line_four{
-        width:100%;
-        height: 5px;
-        background-color: yellow;
-
+.todo-checked {
+  text-decoration:line-through;
+  color: #888;
 }
-.line_five{
-        width:100%;
-        height: 5px;
-        background-color: deepskyblue;
 
-}
-.plan_content{
-        position: relative;
-        top:20px;
-        border: 0.1px solid skyblue;
-        width: 100%;
-        background-color: rgba(240, 230, 140, 0.568)
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 10rpx 40rpx;
+  font-size: 26rpx;
+  color: #777;
 }
 .btn-area{
         position: relative;
-        top: 50px;
+        
 }
 .btn{
-        background-color: skyblue
+        background-color: skyblue;
+      color: white;
+}
+.cell {
+padding: 10px 15px;
+position: relative;
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+-webkit-box-align: center;
 }

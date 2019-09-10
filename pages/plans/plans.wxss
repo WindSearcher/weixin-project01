@@ -9,14 +9,23 @@
 }
 .plan_manage view{
         display: flex;
-        justify-content: center
+        
+         
+  justify-content: space-between;
+  margin: 10rpx 40rpx;
+  font-size: 26rpx;
+  color: rgb(179, 172, 172);
 }
 image{
         width: 30px;
         height: 30px;
 }
 .delete{
-        color: red;
+        display: flex;
+  justify-content: space-between;
+  margin: 10rpx 40rpx;
+  font-size: 26rpx;
+  color: rgb(179, 172, 172);
 }
 
 
@@ -33,7 +42,9 @@ image{
         height: 100%;
         margin-left: 5%;
         margin-top: 15px;
-        border: 1px dotted gray;
+       border: 1rpx solid #e0e0e0;
+border-radius: 10rpx;
+box-shadow: 0 0 5rpx #e0e0e0;
 }
 
 .plan_index {
@@ -45,12 +56,14 @@ image{
 .plan_content {
         padding-left: 15px;
         margin-top: 5px;
-        color: rgb(0, 89, 255);
-        font-size: 13px;
+        font-size: 26rpx;
+  color: rgb(179, 172, 172);
 }
 
 .plan_time {
         margin-top: 5px;
+        margin-right: 10rpx;
+
         position: absolute;
         font-size: 10px;
         right: 0px;
@@ -81,4 +94,32 @@ image{
         display: flex;
         align-items: center;
         justify-content: center;
+}
+.btn_last {
+  color: white;
+background-color: skyblue;
+
+}
+.title {
+display: flex;
+  justify-content: space-between;
+  margin: 10rpx 40rpx;
+  font-size: 25px;
+  color: #777;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 10rpx 40rpx;
+  font-size: 26rpx;
+  color: rgb(179, 172, 172);
+}
+.hidden_text {
+   
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all; /* 追加这一行代码 */
 }

@@ -27,7 +27,7 @@
       </block>
     </view>
     <view>
-      <button>已经到底了</button>
+      <button class="btn_last">已经到底了</button>
     </view>
   </view>
 
