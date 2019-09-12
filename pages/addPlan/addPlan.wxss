@@ -1,23 +1,24 @@
 .container {
-height: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
-padding: 80rpx 0;
-box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80rpx 0;
+  box-sizing: border-box;
 }
-.plan_content {
-margin: 20rpx 40rpx;
-border: 1rpx solid #e0e0e0;
-border-radius: 10rpx;
-box-shadow: 0 0 5rpx #e0e0e0;
-font-size: 14px;
 
+.plan_content {
+  margin: 20rpx 40rpx;
+  border: 1rpx solid #e0e0e0;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx #e0e0e0;
+  font-size: 14px;
 }
+
 .button-hover {
-color: rgba(255, 255, 255, 0.6);
-background-color: rgb(22, 146, 155);
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgb(22, 146, 155);
 }
 
 .userinfo {
@@ -51,14 +52,14 @@ background-color: rgb(22, 146, 155);
 }
 
 .text {
-margin: 20rpx 40rpx;
-border: 1rpx solid #e0e0e0;
-border-radius: 10rpx;
-box-shadow: 0 0 5rpx #e0e0e0;
-
+  margin: 20rpx 40rpx;
+  border: 1rpx solid #e0e0e0;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx #e0e0e0;
 }
+
 .todo-checked {
-  text-decoration:line-through;
+  text-decoration: line-through;
   color: #888;
 }
 
@@ -69,19 +70,30 @@ box-shadow: 0 0 5rpx #e0e0e0;
   font-size: 26rpx;
   color: #777;
 }
-.btn-area{
-        position: relative;
-        
+
+.btn-area {
+  position: relative;
 }
-.btn{
-        background-color: skyblue;
-      color: white;
+
+.btn {
+  background-color: skyblue;
+  color: white;
 }
+
 .cell {
-padding: 10px 15px;
-position: relative;
-display: -webkit-box;
-display: -webkit-flex;
-display: flex;
--webkit-box-align: center;
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+}
+
+.hidden_text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all; /* 追加这一行代码 */
 }

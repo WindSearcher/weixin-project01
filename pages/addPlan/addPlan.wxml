@@ -1,18 +1,18 @@
-
-
 <view class="todos">
   <view class="weui-cells__title">计划列表</view>
   <view class="weui-cells weui-cells_after-title">
-    <block wx:if="{{todos.length}}">
-      <checkbox-group bindchange="todoChange">
-        <label class="weui-cell weui-check__label" wx:for="{{todos}}" wx:key="{{item.index}}">
-          <checkbox class="weui-check" value="{{item.index}}" checked="{{item.completed}}" />
+    <block wx:if="{{plan_item.length}}">
+      <checkbox-group bindchange="changeStatus">
+        <label class="weui-cell weui-check__label" wx:for="{{plan_item}}" wx:key="{{item.id}}">
+          <!-- <switch checked='{{item.status}}'  bindtap="changeStatus" class="weui-check" >
+                                </switch>   -->
+          <checkbox class="weui-check" value="{{item.id}}" checked="{{item.status}}" bindchange="changeStatus" />
           <view class="weui-cell__hd weui-check__hd_in-checkbox">
-            <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.completed}}"></icon>
-            <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.completed}}"></icon>
+            <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.status}}"></icon>
+            <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.status}}"></icon>
           </view>
-          <view class="weui-cell__bd" wx:if="{{!item.completed}}">{{item.value}}</view>
-          <view class="weui-cell__bd todo-checked" wx:if="{{item.completed}}">{{item.value}}</view>
+          <view class="hidden_text weui-cell__bd" wx:if="{{!item.status}}">{{item.content}}</view>
+          <view class="hidden_text weui-cell__bd todo-checked" wx:if="{{item.status}}">{{item.content}}</view>
         </label>
       </checkbox-group>
     </block>
@@ -26,18 +26,18 @@
 </view>
 
 <view class="footer">
-  <text bindtap="handleAll">{{allCompleted ? '已完成所有计划' : '未完成所有计划'}}</text>
-  <text bindtap="clearCompleted">清除已完成计划</text>
+
+  <text bindtap="filterCompleted">显示今天未完成的计划</text>
 </view>
 <view class="container">
   <view class="userinfo">
-    <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image> -->
+
     <view class="section">
-      <textarea placeholder='为属于你的一天做个计划吧...'  class="text cell" auto-focus  type="text" name="plan" value="{{plan}}" bindinput='getPlan'></textarea>
+      <textarea placeholder='为属于你的一天做个计划吧...' class="text cell" auto-focus type="text" name="plan" value="{{plan}}" bindinput='getPlan'></textarea>
     </view>
 
   </view>
   <view class="btn-area">
-    <button bindtap='planSubmit' class="btn" size="default" >添加计划</button>
+    <button bindtap='planSubmit' class="btn" size="default">添加计划</button>
   </view>
 </view>
