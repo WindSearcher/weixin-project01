@@ -21,7 +21,8 @@
     "pages/alterPlan/alterPlan",
     "pages/myWish/myWish",
     "pages/wishDetail/wishDetail",
-    "pages/jokes/jokes"
+    "pages/jokes/jokes",
+    "pages/myArticle/myArticle"
   ],
   "requiredBackgroundModes": [
     "audio"

@@ -66,14 +66,26 @@ Page({
     var that = this;
     let id = this.data.id;
     console.log("id:" + id);
-
-    app.ajax.post('/diary/delete', {
-      id: id,
-    }, function(res) {
-      console.log(res.data);
-      wx.navigateBack();
+    wx.showModal({
+      title: '提示',
+      content: '你确定删除这篇日记吗？',
+      success(res) {
+        if (res.confirm) {
+          app.ajax.post('/diary/delete', {
+            id: id,
+          }, function (res) {
+            console.log(res.data);
+            wx.navigateBack();
+          })
+        } else if (res.cancel) {
+          wx.showToast({
+            title: '取消删除',
+            icon: 'none',
+            duration: 1000
+          })
+        }
+      }
     })
-
   },
 
   /**

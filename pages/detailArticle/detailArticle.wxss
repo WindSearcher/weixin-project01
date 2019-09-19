@@ -20,7 +20,7 @@
   margin-left: 30rpx;
   margin-top: 30rpx;
   font-size: 25px;
-  color: aqua;
+  color: #333300;
   font-weight: bold;
 
 }
@@ -45,24 +45,16 @@
   font-size: 22px;
 }
 
-.diary .sentiment image {
-  width: 30px;
-  height: 30px;
-  vertical-align: middle;
-  display:inline-block;
-  margin-right:20rpx;
-}
-
 .footer image {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   vertical-align:middle;
 }
 
 .footer .left {
   width: 50%;
-  height:80rpx;
-  line-height:80rpx;
+  height:60rpx;
+  line-height:60rpx;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -72,8 +64,8 @@
 
 .footer .right {
   width: 50%;
-  height:80rpx;
-  line-height:80rpx;
+  height:60rpx;
+  line-height:60rpx;
   position: fixed;
   bottom: 0;
   right: 0;

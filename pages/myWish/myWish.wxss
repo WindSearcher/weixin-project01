@@ -9,7 +9,7 @@
   color:black;
   padding:10rpx;
   margin-bottom:15rpx;
-  margin-top:15rpx;
+  margin-top:35rpx;
   box-sizing: border-box; 
   position:relative;
 }

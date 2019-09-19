@@ -65,7 +65,7 @@ Page({
   //我的日记
   toArticles() {
     wx.navigateTo({
-      url: '/pages/showArticle/showArticle',
+      url: '/pages/myArticle/myArticle',
     })
   },
 

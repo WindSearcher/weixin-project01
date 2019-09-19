@@ -7,8 +7,7 @@
         </view>
 
         <view>
-          <image class="position" src="../../images/emotion_value.png"></image>
-          <text style="color:#ccc;font-size:10px;">情绪值  {{item.sentiment}}</text>
+          <text style="color:#ccc;font-size:14px;margin-left:20px;">情绪值  {{item.sentiment}}</text>
         </view>
       </view>
 

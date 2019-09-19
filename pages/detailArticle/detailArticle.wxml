@@ -17,19 +17,18 @@
   </view>
 
   <view class="sentiment">
-    <image src="../../images/emotion_value.png"></image>
     <text style="color:#ccc;font-size:16px;">情绪值  {{sentiment}}</text>
   </view>
 
   <view class="footer">
     <view class="left" bindtap='updateDiary'>
       <image src="../../images/update.png"></image>
-      <text>修改</text>
+      <text style='font-size:14px;'>修改</text>
     </view>
 
     <view class="right" bindtap='deleteDiary'>
       <image src="../../images/delete.png"></image>
-      <text>删除</text>
+      <text style='font-size:14px;'>删除</text>
     </view>
   </view>
 </view>

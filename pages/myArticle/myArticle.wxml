@@ -1,0 +1,2 @@
+<!--pages/myArticle/myArticle.wxml-->
+<component-showArticle></component-showArticle>

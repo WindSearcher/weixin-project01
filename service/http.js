@@ -1,4 +1,4 @@
-var rootDocment = 'https://www.jie12366.xyz:88'; //你的域名
+var rootDocment = 'https://127.0.0.1:88'; //你的域名
 
 function post(url, data, cb) {
 
