@@ -20,7 +20,7 @@ Page({
         text: '星语心愿'
       },
     ],
-    currentTab: 0,
+    currentTab: 3,
     pageSize:5
   },
   //事件处理函数
@@ -64,8 +64,6 @@ Page({
         })
       },
     })
-
-    console.log("height:"+that.data.windowHeight);
   },
 
   switchNav(event) {
@@ -125,14 +123,16 @@ Page({
    
   //上拉加载
   onReachBottom() {
-    var that = this
+    var that = this;
     let currentTab = this.data.currentTab;
+    console.log("currentTab:"+currentTab);
     //这里可以判断是否进行上拉加载，禁止某个子组件上拉刷新
-    if (currentTab != 1 || currentTab != 3){
+    //这里有个bug,如果我滑到currentTab=3时，会出现不满足第一个条件为真，无需继续
+    if (currentTab != 1 && currentTab != 3){
       wx.showLoading({
         title: '正在加载',
       })
-
+         
       this.showArticle.getArticle01()
       wx.hideLoading()
     }

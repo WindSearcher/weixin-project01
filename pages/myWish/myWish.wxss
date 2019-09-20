@@ -2,6 +2,13 @@
 
 /* 为了移动端的自适应，采取rpx布局方式 */
 
+/*主要为了消除float浮动*/
+.container{
+   height:450px;
+   width:100%;
+
+}
+
 .wish{
   width:43%;
   height:200px;
@@ -12,7 +19,9 @@
   margin-top:35rpx;
   box-sizing: border-box; 
   position:relative;
+  border:1px solid red;
 }
+
 .wish:nth-of-type(odd){
   margin-left:25rpx;
 }
@@ -36,17 +45,20 @@
    margin-left:20px;
 }
 
-/* 文字超出以省略号代替,点赞数 */
+/* 文字超出以省略号代替,点赞数,5行加省略号*/
 .wish .wish-content{
-  width:41%;
-  height:150px;
-  margin-top:15px;
-  font-size:15px;
+  width:100%;
+  height:120px;
+  margin-top:15rpx;
+  font-size:35rpx;
   font-family: STKaiti;
   word-break:break-all;
-  overflow:hidden;
-  text-overflow:ellipsis;
 
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 
@@ -54,7 +66,7 @@
   width: 40rpx;
   height: 40rpx;
   position:absolute;
-  
+  margin-top:15rpx;
 }
 
 
@@ -66,18 +78,19 @@
    bottom:20px;
 }
 
-.previous .img{
-  width:40px;
-  height:40px;
-   position:fixed;
-   right:80%;
-   bottom:20px;
+
+
+.previous{
+   width:40px;
+   height:40px;
+   margin-left:230rpx;
+   margin-right:100rpx;
+   display:inline-block;
 }
 
-.next .img{
-  width:38px;
-  height:38px;
-   position:fixed;
-   right:40%;
-   bottom:20px;
+
+.next{
+  width:40px;
+  height:40px;
 }
+

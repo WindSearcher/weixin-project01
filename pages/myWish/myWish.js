@@ -145,6 +145,8 @@
   // }
 // })
 
+
+//主要用于展示个人意愿
 const app = getApp()
 
 Component({
@@ -166,6 +168,7 @@ Component({
   lifetimes: {
     // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
     attached: function () { 
+      console.log("wish");
       this.getWish();
       if (this.data.pageCurrent > 1) {
         this.setData({
