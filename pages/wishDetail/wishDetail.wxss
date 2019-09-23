@@ -1,4 +1,43 @@
 /* pages/wishDetail/wishDetail.wxss */
+.wish{
+   
+}
+
+.wish .wish-img {
+  margin-top:30rpx;
+  margin-left:30rpx;
+  margin-right:30rpx;
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+
+.wish-username{
+   font-size:38rpx;
+   color:#ccc;
+}
+
+
+.wish .wish-content {
+  margin: 30rpx;
+  overflow:hiddern;
+  word-break:break-all;
+ 
+}
+
+.bottom-content{
+  font-size: 18px;
+  margin-left: 250rpx;
+}
+
+.wish .wish-time {
+  margin-top: 25rpx;
+  font-size: 35rpx;
+  margin-left:300rpx;
+  color:#ccc;
+}
 
 .liuyanview {
   width: 90%;
@@ -13,14 +52,14 @@
 }
 
 .headimg {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
 }
 
 .headimg image {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
 }
 
@@ -30,6 +69,8 @@
   width: 100%;
   height: 200rpx;
   margin-bottom: 60rpx;
+  padding-left:20rpx;
+  font-size:37rpx;
 }
 
 .btn {
@@ -62,28 +103,4 @@
 
 .liuyan {
   margin-top: 100rpx;
-}
-
-.wish .wish-img {
-  margin-top: 25rpx;
-  margin-left: 100rpx;
-  width: 60px;
-  height: 60px;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.wish .wish-txt {
-  margin-top: 25rpx;
-  font-size: 20px;
-  display: inline-block;
-  margin-left: 50px;
-}
-
-.wish .wish-content {
-  margin: 30rpx;
-}
-.bottom-content{
-  font-size: 18px;
-  margin-left: 250rpx;
 }

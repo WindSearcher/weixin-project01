@@ -1,10 +1,12 @@
 <!--pages/wishDetail/wishDetail.wxml-->
 <view class="wish">
   <image class="wish-img" src="{{wish.avatarUrl}}" bindtap="getDairyList" />
-  <view class="wish-txt">{{wish.time}}</view>
+  <text class="wish-username">{{wish.userName}}</text>
   <view class="wish-content">
     {{wish.content}}
   </view>
+
+  <view class="wish-time">许愿时间：{{wish.time}}</view>
 </view>
 
 <!--留言-->

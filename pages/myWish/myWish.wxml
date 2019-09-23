@@ -1,6 +1,5 @@
-<!--pages/myWish/myWish.wxml-->
-<view class="container">
-    <block wx:for="{{wishList}}">
+
+  <block wx:for="{{wishList}}">
       <view class="wish" style="background-color:{{color[index%4]}}">
         <view bindtap='toDetail' data-id='{{item.id}}'>
           <image class="wish-img" src="{{item.avatarUrl}}" bindtap="getDairyList" />
@@ -11,12 +10,11 @@
         </view>
         <image bindtap='deleteWish' data-id='{{item.id}}' src='../../images/delete.png' class="wish_delete"></image>
       </view>
-    </block>
-</view>
+  </block>
+
 
 
 <view class="switch">
-
 
     <image class="previous" src="../../images/previous.png" bindtap='previous'> </image>
 

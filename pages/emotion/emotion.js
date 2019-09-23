@@ -20,7 +20,7 @@ Page({
         text: '星语心愿'
       },
     ],
-    currentTab: 3,
+    currentTab: 0,
     pageSize:5
   },
   //事件处理函数

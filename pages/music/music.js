@@ -38,7 +38,7 @@ Component({
           name: res.data.name,
         })
         console.log(res.data);
-        console.log(that.data.music.name);
+        //console.log(that.data.music.name);
       })
     },
 

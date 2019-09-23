@@ -3,11 +3,6 @@
 /* 为了移动端的自适应，采取rpx布局方式 */
 
 /*主要为了消除float浮动*/
-.container{
-   height:450px;
-   width:100%;
-
-}
 
 .wish{
   width:43%;
@@ -19,7 +14,7 @@
   margin-top:35rpx;
   box-sizing: border-box; 
   position:relative;
-  border:1px solid red;
+  
 }
 
 .wish:nth-of-type(odd){
@@ -29,6 +24,15 @@
 .wish:nth-of-type(even){
   margin-left:50rpx; 
 }
+
+.wish:nth-of-type(1){
+  margin-top:90rpx; 
+}
+
+.wish:nth-of-type(2){
+  margin-top:90rpx; 
+}
+
 
 
 .wish .wish-img{
