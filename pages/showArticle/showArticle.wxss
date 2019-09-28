@@ -55,6 +55,7 @@
    font-size:15px;
    color:#ccc;
    word-break:break-all;
+   overflow:hidden;
 }
 
 

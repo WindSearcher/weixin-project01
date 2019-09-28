@@ -6,13 +6,13 @@
     {{wish.content}}
   </view>
 
-  <view class="wish-time">许愿时间：{{wish.time}}</view>
+  <view class="wish-time">{{wish.time}}</view>
 </view>
 
 <!--留言-->
 <view class='liuyan'>
   <form bindsubmit="formSubmit">
-    <textarea class="liuyantext" type="text" placeholder='请输入留言内容' name="liuyantext" bindinput='getLiuyan'></textarea>
+    <textarea class="liuyantext" type="text" placeholder='说点什么' name="liuyantext" bindinput='getLiuyan'></textarea>
     <button formType="submit" class="btn">留言</button>
   </form>
 </view>
@@ -22,17 +22,36 @@
 </view>
 <view style="text-align:center;font-size:14px;color:#ccc;margin-top:20px;">以下是留言内容</view>
 <view wx:for="{{liuyanlist}}" wx:key="liuyanlist" class="liuyanview">
-  <view class="headimg">
-    <image src="{{item.avatarUrl}}"></image>
-  </view>
-  <view class="nickname_liuyantext">
-    <view class="nickname">{{item.nickname}}
-      <view class="time">{{item.date}}</view>
+  <view hidden="{{item.rnickname}}">
+    <view class="headimg">
+      <image src="{{item.avatarUrl}}"></image>
     </view>
-    <view class="text">{{item.mess}}</view>
+    <view class="nickname_liuyantext">
+      <view class="nickname">{{item.nickName}}</view>
+      <view class="text">{{item.mess}}</view>
+      <view class="time">{{item.date}}</view>
+      <view class="reply" bindtap="reply" data-nickname="{{item.nickName}}">回复</view>
+    </view>
+  </view>
+
+  <modal id="modal" hidden="{{hiddenmodalput}}" title="回复留言" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="formSubmit">
+    <textarea class="liuyantext" type="text" placeholder='@{{rNickname}}：' name="liuyantext" bindinput='getLiuyan'></textarea>
+  </modal>
+
+  <view wx-if="{{item.rnickname}}">
+    <view class="headimg">
+      <image src="{{item.avatarUrl}}"></image>
+    </view>
+    <view class="nickname_liuyantext">
+      <view class="nickname">{{item.nickName}}</view>
+      <view class="text">
+        <text wx-if="{{item.rnickname}}">@{{item.rnickname}}：</text>{{item.mess}}</view>
+      <view class="time">{{item.date}}</view>
+      <view class="reply" bindtap="reply" data-nickname="{{item.nickName}}">回复</view>
+    </view>
   </view>
   <!-- 占位符 -->
-  <view style="width:100%;height:10px;"></view>
+  <view style="width:100%;height:10px;border-bottom:0.1rpx dashed #ccc"></view>
 </view>
 
 <view wx:if="{{hasData}}">

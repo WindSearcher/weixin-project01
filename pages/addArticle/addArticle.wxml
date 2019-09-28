@@ -16,7 +16,8 @@
 
 
     <view class="title">
-        <textarea placeholder="请输入少于15字标题"  bindblur="getTitle" maxlength="15"/>
+        <!-- 可通过加focus在编译器上也可以输入 -->
+        <textarea placeholder="请输入少于15字标题"  bindblur="getTitle" maxlength="15" focus/>
     </view>
 
 

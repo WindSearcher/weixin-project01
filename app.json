@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/myWish/myWish",
     "pages/emotion/emotion",
     "pages/index/index",
     "pages/showArticle/showArticle",
@@ -20,7 +19,7 @@
     "pages/updateArticle/updateArticle",
     "pages/deletePlan/deletePlan",
     "pages/alterPlan/alterPlan",
-  
+    "pages/myWish/myWish",
     "pages/wishDetail/wishDetail",
     "pages/jokes/jokes",
     "pages/myArticle/myArticle"

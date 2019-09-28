@@ -3,6 +3,7 @@
     "usingComponents": {
       "component-showArticle": "../showArticle/showArticle",
       "component-music":"../music/music",
-      "component-wishWall":"../wishWall/wishWall"
+      "component-wishWall":"../wishWall/wishWall",
+      "component-jokes":"../jokes/jokes"
     }
 }

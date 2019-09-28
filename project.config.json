@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -67,6 +67,14 @@
 					"id": -1,
 					"name": "setting",
 					"pathName": "pages/setting/setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "wish",
+					"pathName": "pages/myWish/myWish",
+					"query": "",
 					"scene": null
 				}
 			]

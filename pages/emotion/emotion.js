@@ -95,6 +95,7 @@ Page({
     this.getTouchData(this.data.fx, this.data.fy, x, y);
   },
 
+  //判断是左滑还是右滑
   getTouchData: function (endX, endY, startX, startY) {
     let turn = "";
     if (endX - startX > 80 && Math.abs(endY - startY) < 50) {      //右滑

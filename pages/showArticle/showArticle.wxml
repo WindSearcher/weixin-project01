@@ -13,9 +13,12 @@
 
       <view class="right">
         <view>
-          <text class="title">{{item.title}}</text>
+           <text class="title">{{item.title}}</text>
         </view>
-        <text class="content">{{item.content}}</text>
+
+        <!-- 这里最好不要用text,因为text会显示换行符，view则不会，故摘要显示用view -->
+        <view class="content">{{item.content}}</view>
+        
         <view>
 
         </view>
